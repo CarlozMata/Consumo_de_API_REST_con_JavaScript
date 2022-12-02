@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gatos Aleatorios</title>
-</head>
-<body>
-  <h1>Gatos Aleatorios</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gatos Aleatorios</title>
+  </head>
+  <body>
+    <h1>Imagenes Aleatorias App</h1>
 
-  <button onclick="reload()" >Recargar</button><br>
-  <img width="150" src="" alt="Foto de gatito aleatorio">
+    <span id="error"></span>
 
-  <script src="./main.js"></script>
-</body>
+    <section id="randomMichis">
+      <h2>Fotos Aleatorios</h2>
+      <article>
+        <img id="img1" width="80" src="" alt="Foto aleatoria" /><br />
+        <button>Guardar Favoritos</button>
+      </article>
+
+      <article>
+        <img id="img2" width="80" src="" alt="Foto aleatoria" /><br />
+        <button>Guardar Favoritos</button>
+      </article>
+
+      <button onclick="loadRandomMichis()">Recargar</button>
+    </section>
+
+    <section id="favoritesMichis">
+      <h2>Fotos Favoritas</h2>
+      <article>
+        <img id="img1" width="150" alt="Foto aleatorio" />
+        <button onclick="loadFavoritesMichis()">Sacar Foto de Favoritos</button>
+      </article>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
