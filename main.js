@@ -1,6 +1,8 @@
 console.log("Hello")
 
-const API_URL ='https://api.thecatapi.com/v1/images/search'
+const API_URL ='https://api.thecatapi.com/v1/images/search?limit=3'
+
+console.log(data)
 
 /*fetch(URL)
   .then(res => res.json())
@@ -14,3 +16,5 @@ async function reload() {
   const img = document.querySelector('img')
   img.src = data[0].url
 }
+
+reload();
