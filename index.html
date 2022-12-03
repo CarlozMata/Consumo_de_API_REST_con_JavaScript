@@ -15,12 +15,16 @@
       <h2>Fotos Aleatorios</h2>
       <article>
         <img id="img1" width="80" src="" alt="Foto aleatoria" /><br />
-        <button>Guardar Favoritos</button>
+        <button id="btn1" onclick="saveFavouriteMichis()">
+          Guardar Favoritos
+        </button>
       </article>
 
       <article>
         <img id="img2" width="80" src="" alt="Foto aleatoria" /><br />
-        <button>Guardar Favoritos</button>
+        <button id="btn2" onclick="saveFavouriteMichis()">
+          Guardar Favoritos
+        </button>
       </article>
 
       <button onclick="loadRandomMichis()">Recargar</button>
@@ -30,7 +34,7 @@
       <h2>Fotos Favoritas</h2>
       <article>
         <img id="img1" width="150" alt="Foto aleatorio" />
-        <button onclick="loadFavoritesMichis()">Sacar Foto de Favoritos</button>
+        <button onclick="loadFavoriteMichis()">Sacar Foto de Favoritos</button>
       </article>
     </section>
 
