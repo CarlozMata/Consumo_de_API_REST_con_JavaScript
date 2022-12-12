@@ -39,8 +39,18 @@ async function loadFavoriteMichis() {
     spanError.innerHTML = "Hubo un error: " + response.status + data.message;
   } else {
     data.forEach(michi => {
-      michi.image.url
-    })
+      const section = document.getElementById('favoriteMichis');
+      const article = document.createElement('article');
+      const img = document.createElement('img');
+      const btn = document.createElement('button');
+      const btnText = document.createTextNode('Sacar foto de Favoritos');
+
+      btn.appendChild(btnText);
+      img.src = michi.image.url
+      article.appendChild(img);
+      article.appendChild(btn);
+      section.appendChild(article);
+    });
   }
 }
 
@@ -62,7 +72,6 @@ async function saveFavouriteMichis() {
   if (response.status !== 200) {
     spanError.innerHTML = "Hubo un error: " + response.status + data.message;
   }
-
 }
 
 loadFavoriteMichis();
